@@ -1,1 +1,1 @@
-https://github.com/stevenarditti/cs4500-hw/tree/master/a1/part2
+https://github.com/stevenarditti/cs4500-a1-pt2.git
