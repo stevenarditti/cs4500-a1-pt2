@@ -1,6 +1,5 @@
-#include "String.h"
-#include "Object.h"
-#include "Queue.h"
+#include "string.h"
+#include "queue.h"
 #include <stdlib.h>
 #include <iostream>
 
@@ -30,26 +29,28 @@ void test1() {
 
 //tests queues
 void test2() {
-    Queue * a = new Queue();
-    Queue * b = new Queue();
-    a->enqueue(s);
-    a->enqueue(t);
-    b->enqueue(s1);
-    b->enqueue(s2);
-
-    t_true((a->peek())->equals(b->peek()));
-    t_true((a->dequeue())->equals(b->dequeue()));
-    t_false((a->dequeue())->equals(b->dequeue()));
-    t_false((a->peek())->equals(b->peek()));
-    t_true((a->size())->equals(b->size()));
-    b->dequeue();
-    t_false((a->size())->equals(b->size()));
+  Queue * a = new Queue();
+  Queue * b = new Queue();
+  Object * s = new String("Hello");
+  Object * t = new String("World");
+  Object * s1 = new String(" Hello ");
+  Object * s2 = new String("He");
+  a->enqueue(s);
+  a->enqueue(t);
+  b->enqueue(s1);
+  b->enqueue(s2);
+  
+  t_true((a->peek())->equals(b->peek()));
+  t_true((a->dequeue())->equals(b->dequeue()));
+  t_false((a->dequeue())->equals(b->dequeue()));
+  t_false((a->peek())->equals(b->peek()));
+  t_true((a->size()) == b->size());
+  b->dequeue();
+  t_false((a->size()) == b->size());
 }
 
-int test() {
-
-    test1();
-    test2();
-    return 0;
-
+int main() {
+  test1();
+  test2();
+  return 0;
 }
