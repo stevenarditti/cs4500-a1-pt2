@@ -21,7 +21,7 @@ class String : public Object {
     /**
      * Checks if the given object is equal to this object.
     */
-    size_t equals(Object o) { return 0; }
+    bool equals(Object o) { return 0; }
 
     /**
      * Returns the String beginning at the starting index and

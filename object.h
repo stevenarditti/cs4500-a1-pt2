@@ -12,6 +12,6 @@ class Object {
     /**
      * Checks if the given object is equal to this object
     */
-    virtual size_t equals(Object o) { return 0; }
+    virtual bool equals(Object o) { return 0; }
 
 };
