@@ -33,7 +33,7 @@ void test2() {
   Queue * b = new Queue();
   Object * s = new String("Hello");
   Object * t = new String("World");
-  Object * s1 = new String(" Hello ");
+  Object * s1 = new String("Hello");
   Object * s2 = new String("He");
   a->enqueue(s);
   a->enqueue(t);
