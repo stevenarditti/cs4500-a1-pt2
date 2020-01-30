@@ -3,10 +3,6 @@
 class Queue : public Object {
 public:
   
-  // list of Objects
-  Object** q;
-  
-  
   /**
    *  adds an object to the end of this queue
    */
