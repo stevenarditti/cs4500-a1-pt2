@@ -19,9 +19,10 @@ void test1() {
   t_false(s->equals(t));
   t_false(s->equals(u));
   t_true(s->compare(s) == 0);
-  t_false(s->compare(t) != 0);
+  t_true(s->compare(t) != 0);
   t_false(s->equals(s1));
-  t_true(s->equals(s1->trim()));
+  s1->trim();
+  t_true(s->equals(s1));
   t_true(s->contains(s2));
   
   OK("1");
@@ -33,11 +34,13 @@ void test2() {
   Queue * b = new Queue();
   Object * s = new String("Hello");
   Object * t = new String("World");
-  Object * s1 = new String(" Hello ");
+  Object * s1 = new String("Hello");
   Object * s2 = new String("He");
   a->enqueue(s);
   a->enqueue(t);
+  a->enqueue(s1);
   b->enqueue(s1);
+  b->enqueue(s2);
   b->enqueue(s2);
   
   t_true((a->peek())->equals(b->peek()));
