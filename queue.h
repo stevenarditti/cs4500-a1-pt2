@@ -39,8 +39,5 @@ public:
     return false;
   }
   
-  const char* to_string() {
-    return "";
-  }
   
 };
