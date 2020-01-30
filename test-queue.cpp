@@ -21,7 +21,8 @@ void test1() {
   t_true(s->compare(s) == 0);
   t_true(s->compare(t) != 0);
   t_false(s->equals(s1));
-  t_true(s->equals(s1->trim()));
+  s1->trim();
+  t_true(s->equals(s1));
   t_true(s->contains(s2));
   
   OK("1");
